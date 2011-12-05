@@ -1,0 +1,41 @@
+PotionMaster allows you to add potion effects to any player in your server, including altering the modifier effects.
+
+How to set up
+
+Drag and drop the PotionsMaster.jar into your plugin folder. Starting / Restarting the server will create a default configuration file found in "Plugins/buffs/config.yml" From here, you can add new premade buffs. Here is an annotated example.
+
+admin: # the name of the alias
+  modifier: 3 # "Strength" of the potion
+  duration: 60 # how long in seconds the effect will last for
+  bufftypes: # this is a list of the effects to add.
+  - fast
+  - fastdig
+  - jump
+  - regen
+  - fireresist
+Adding permissions
+
+There are 4 nodes for PotionsMaster.
+
+potions.buff - allows players to buff themselves and others with the premade buffs found in the config file
+
+potions.debuff  - allows the player to remove all effects from either themselves or another player.//
+
+potions.reload - reloads the config file
+
+potions.custombuff -  allows the player to create an effect with any modifier, time limit or type they want, and either inflict it on themselves or another player
+Commands
+
+List of commands:
+
+/buff [alias] {player} adds all the predefined effects under the name of [alias] to the {player} (or themselves if no player is specified)
+
+/debuff {player} removes all effects from a player
+
+/custombuff {player} [id] [modifier] [time] adds the effect [id] to {player} with modifier [modifier] and for time (seconds) [time]
+
+/reloadbuffs reloads the config file
+
+Final notes:
+
+Some of the speed and jump potions make nocheat go crazy. Also some effects don't work. (such as no breathe etc)

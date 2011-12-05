@@ -1,0 +1,22 @@
+author: mahoutsukaii
+description: Potion master
+main: me.mahoutsukaii.plugins.potionsmaster.BuffsPlugin
+name: PotionMaster
+startup: postworld
+url: http://jadon-mc.net/
+version: '0.1'
+
+
+commands:
+  buff:
+    description: buffs a player using premade configurations
+    usage: /<command> [alias] {Player}
+  debuff:
+    description: removes all effects from a player
+    usage: /<command> {Player}
+  custombuff:
+    description: applies custom effects
+    usage: /<command> {Player} [id] [modifier] [time]
+  reloadbuffs:
+    description: reloads buffs from current file.
+    usage: /<command>
